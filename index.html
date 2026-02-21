@@ -1,14 +1,26 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>수유실 있는 카페 찾기</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <header>
+    <h1>수유실 있는 카페 찾기</h1>
+  </header>
+  <main>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="지역, 카페 이름으로 검색">
+      <button id="search-button">검색</button>
+    </div>
+    <div id="cafe-list" class="cafe-list">
+      </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 수유실 있는 카페 찾기</p>
+  </footer>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
