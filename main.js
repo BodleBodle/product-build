@@ -1,6 +1,7 @@
 const cafeList = document.getElementById('cafe-list');
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
+const themeSwitch = document.getElementById('checkbox');
 
 const cafes = [
   { name: '별다방', location: '서울시 강남구', hasNursingRoom: true },
@@ -40,12 +41,21 @@ function searchCafes() {
   displayCafes(filteredCafes);
 }
 
+function toggleTheme() {
+  if (themeSwitch.checked) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
+
 searchButton.addEventListener('click', searchCafes);
 searchInput.addEventListener('keyup', (event) => {
   if (event.key === 'Enter') {
     searchCafes();
   }
 });
+themeSwitch.addEventListener('change', toggleTheme);
 
 // Initially display all cafes with nursing rooms
 displayCafes(cafes);
