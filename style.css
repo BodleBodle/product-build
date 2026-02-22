@@ -104,9 +104,23 @@ body.dark-mode .contact-section {
   border-color: #555;
 }
 
-.contact-section h2 {
+.contact-section h2,
+.comments-section h2 {
   margin-top: 0;
   color: #e87a90;
+}
+
+.comments-section {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+body.dark-mode .comments-section {
+  background-color: #444;
+  border-color: #555;
 }
 
 .contact-form {
