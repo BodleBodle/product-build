@@ -44,9 +44,18 @@ function searchCafes() {
 function toggleTheme() {
   if (themeSwitch.checked) {
     document.body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
   } else {
     document.body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
   }
+}
+
+// Check for saved theme preference on load
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+  themeSwitch.checked = true;
+  document.body.classList.add('dark-mode');
 }
 
 searchButton.addEventListener('click', searchCafes);
